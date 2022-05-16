@@ -1,4 +1,7 @@
-use serde::{Deserialize, Serialize};
+use {
+    serde::{Deserialize, Serialize},
+    crate::miner::Miner,
+};
 
 // ------------------- JSON Payload (REST)
 
@@ -22,7 +25,7 @@ pub struct NewWalletRequest {
 
 // ------------------- DAO(database access object) Object (DB Table Records)
 
-pub struct Wallet DAO {
+pub struct WalletDAO {
     pub address: String,
     pub club_name: String,
 }
